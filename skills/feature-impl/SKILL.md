@@ -1,7 +1,4 @@
----
-name: feature-implementation
-description: Implement features through a phased pair-programming workflow — plan, write failing tests, implement in small iterations, validate, and document. Use when the user wants to build a new feature step by step with explicit approval between phases. Never writes code until the user approves the plan.
----
+# `/agent-skills:feature-implementation`
 
 ## Goal
 
@@ -188,9 +185,9 @@ If tests fail
 
 Repeat until green.
 
-# Phase 5 - Design note
+# Phase 5 - Architecture Decision Record
 
-Write or update a concise design note.
+Write or update an ADR instead of a free-form design note.
 
 Location
 
@@ -198,14 +195,25 @@ Prefer (create if not exist yet):
 
 * `docs/features/<feature>.md`
 
-The note should include only:
+Format
 
-* Goal
-* Why
-* Chosen approach with technology / libraries / frameworks and why choosing them
-* Current status
+* Two formats available: **Y-statement** (small, low-cost, easily reversible choices) and **MADR** (bigger, harder-to-change choices — e.g. database choice, tool/dependency choice, pattern choice).
+* Form your own judgment on which format fits, then always explicitly ask the user to confirm the format before writing.
 
-Keep it under one page.
+Y-statement template:
+
+> In the context of `<use case>`, facing `<concern>`, we decided for `<option>` and against `<alternatives>`, to achieve `<quality>`, accepting `<downside/tradeoff>`.
+
+MADR template (trimmed to essentials, keep under one page):
+
+* Title
+* Context and problem statement
+* Considered options
+* Decision outcome (chosen option + rationale)
+* Consequences (pros/cons)
+* Status
+
+Every ADR — either format — must end with a **Status** field (e.g. proposed / accepted / superseded), updated as the feature evolves.
 
 ---
 
@@ -227,7 +235,7 @@ Suggested next iteration
 
 * ...
 
-Update the design note with
+Update the ADR's Status field with
 
 * progress
 * decisions
