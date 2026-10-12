@@ -1,9 +1,9 @@
 ---
-name: system-design-practice
-description: Iterative system design practice for interviews. Use when the user says "system design practice", "/system-design-practice", or wants to practice designing a system through MVP → deep-dive iterations with an interviewer persona, drawio XML input, hints for missed problems, and rubric-scored session logs.
+name: system-design-diagram-grilling
+description: Iterative system design diagram analysis and dive deep for interviews. Use when the user says "system design diagram", "/system-design-diagram-grilling", or wants to practice designing a system through MVP → deep-dive iterations with an interviewer persona, drawio XML input, hints for missed problems, and rubric-scored session logs.
 ---
 
-# System Design Practice
+# System Design Diagram Grilling
 
 Iterative design practice simulating a real system design round. The user designs; you play the interviewer.
 
